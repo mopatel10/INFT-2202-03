@@ -17,7 +17,7 @@ elementUl.appendChild(newElement);
 let element = document.createElement("li");
 // Create text node
 let node2 = document.createTextNode("Cheese");
-// Add text node to element
+// Add text node to element 
 element.appendChild(node2);
 // Add element to list
 elementUl.insertBefore(element, elementUl.firstChild);
