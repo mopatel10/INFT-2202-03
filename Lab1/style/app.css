@@ -1,0 +1,41 @@
+/* Custom styles for the home page */
+.home-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Text color */
+    background-color: rgb(23,24,31,255);
+    background-image: linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef),linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef);
+}
+.welcome-text {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    color: rgb(234, 17, 17);
+}
+.description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: rgb(236, 15, 29);
+    margin: 0 auto;
+}
+
+.product-item {
+    color: rgb(240, 71, 71);
+}
+
+.service-item {
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(236, 15, 29); /* Text color */
+}

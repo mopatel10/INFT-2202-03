@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="./style/app.css">
+</head>
+<body>
+
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container" >
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Services Page Content -->
+<section class="home-section" style="background-color: rgb(23,24,31,255);" style="background-image: linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef),linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef);">
+<div class="container">
+    <div class="row">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="./images/web-design.gif" alt="Skill 1" width="350" height="300">
+              <h2 id="service1Name"></h2>
+              <p id="service1Desc"></p>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="./images/oop.gif" alt="Skill 2" width="350" height="325">
+              <h2 id="service2Name"></h2>
+              <p id="service2Desc"></p>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="./images/cs.jpg" alt="Skill 3" width="375" height="325">
+              <h2 id="service3Name"></h2>
+              <p id="service3Desc"></p>
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Scripts -->
+<!-- Link to Bootstrap JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
