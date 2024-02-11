@@ -1,4 +1,12 @@
-// Wait for the DOM to be fully loaded
+/**
+ * Name: Mohammed Patel (100822322)
+ * Date: 01-11-2024
+ * Desc: Lab 1 DOM manipulation JavaScript file
+ */
+
+/**
+ * Wait for the DOM to be fully loaded
+ */
 document.addEventListener("DOMContentLoaded", function() {
     // Add Welcome Text
     let welcomeText = "Welcome to my Website";
@@ -9,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("welcomeNote").innerHTML = welcomeNote;
 });
 
-// Wait for the DOM to be fully loaded
+/**
+ * Wait for the DOM to be fully loaded
+ */
 document.addEventListener("DOMContentLoaded", function() {
     // Add title and description to product 1
     document.getElementById("gameTitle").innerHTML = "Black Ops II";
@@ -24,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("bookDesc").innerHTML = "Bones is a graphic novel series about the three Bone cousins -- Fone Bone, Phoney Bone, and Smiley Bone -- who are separated and lost in a vast, uncharted desert. One by one, they find their way into a deep, forested valley filled with wonderful and terrifying creatures.";
 });
 
-// Wait for the DOM to be fully loaded
+/**
+ * Wait for the DOM to be fully loaded
+ */
 document.addEventListener("DOMContentLoaded", function() {
     // Service 1
     let service1Name = "Web Designing";
@@ -48,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("service3Desc").innerHTML = service3Desc;
 });
 
-// Wait for the DOM to be fully loaded
+/**
+ * Wait for the DOM to be fully loaded
+ */
 document.addEventListener("DOMContentLoaded", function() {
     let aboutName = "Mohammed Patel";
     let aboutDesc = "Hello! I'm Mohammed, a passionate web developer based in the Durham Region. I have a strong interest in building elegant and user-friendly web applications that solve real-world problems. Outside of work, you can often find me volunteering at the local community center, where I teach coding classes to underprivileged youth. I believe in the power of technology to empower and uplift communities, and I'm committed to making a positive impact through my work. In my free time, I enjoy playing guitar, exploring new hiking trails, and experimenting with new recipes in the kitchen. I'm always up for an adventure and love discovering new experiences and cultures. Thank you for visiting my page. I'm excited to connect with fellow developers, collaborate on exciting projects, and continue learning and growing in this ever-evolving field!";
@@ -64,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
 let productsLink = document.querySelector('li.nav-item a.nav-link[href="./products.html"]');
 productsLink.textContent = "Interests";
 
-// Add nav bar item
+/**
+ * Add nav bar item
+ */
 document.addEventListener("DOMContentLoaded", function() {
-    
     // Create a new list item element
     let getUl = document.getElementsByTagName("ul")[0];
-
     let listItem = document.createElement("li");
     listItem.className = "nav-item";
 
@@ -78,13 +92,69 @@ document.addEventListener("DOMContentLoaded", function() {
     link.className = "nav-link";
     link.href = "#"; 
     link.innerHTML = '<i class="fas fa-users">Human Resources</i>';
-
     // Append the anchor element to the list item
     listItem.appendChild(link);
-    getUl.appendChild(listItem);
-    
-    let contactLoc = document.querySelector('li.nav-item a.nav-link[href="./contact.html"]');
+
     // Insert the new list item before the "Contact Us" link
-    getUl.insertBefore(listItem, contactLoc);
+    let elementForPlacement = document.getElementsByTagName("li")[4];
+    getUl.insertBefore(listItem, elementForPlacement);
 });
+
+/**
+ * Fixed bottom footer from bootstrap
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    // Create the navbar container
+    let navbarContainer = document.createElement("nav");
+    navbarContainer.className = "navbar navbar-dark bg-dark fixed-bottom";
+    navbarContainer.style.display = "flex";
+    navbarContainer.style.justifyContent = "center";
+
+    // Create the container for navbar items
+    let navbarContent = document.createElement("div");
+
+    // Create the copyright statement
+    let copyright = document.createElement("span");
+    copyright.className = "navbar-text";
+    copyright.textContent = "Copyright " + new Date().getFullYear() + ", Mohammed Patel";
+
+    // Append copyright statement to navbar container
+    navbarContent.appendChild(copyright);
+
+    // Append navbar items container to navbar container
+    navbarContainer.appendChild(navbarContent);
+
+    // Append navbar container to the document body
+    document.body.appendChild(navbarContainer);
+});
+
+/**
+ * Form submition
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+  
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+  
+      // Get form data
+      const formData = new FormData(form);
+      const formDataObject = {};
+      formData.forEach((value, key) => {
+        formDataObject[key] = value;
+      });
+  
+      // Output form data to console (optional)
+      console.log("Form Data:", formDataObject);
+  
+      // Start timer for redirection
+      setTimeout(function() {
+        window.location.href = "./index.html"; // Redirect to home page
+      }, 3000); // 3 seconds delay for redirection
+    });
+  });
+  
+
+
+
 
