@@ -48,7 +48,7 @@ if (username.length < 2) {
  */
 export function validateEmail(email) {
 if (email.length < 2) {
-        return "<p>You have entered a last name that is too short.</p>"
+        return "<p>You have entered an email that is too short.</p>"
     }
     else {
         return "<p></p>";
