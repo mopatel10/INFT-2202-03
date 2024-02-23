@@ -10,7 +10,7 @@ let url_users = 'https://jsonplaceholder.typicode.com/users';
 // create the fetch function
 async function goFethch(url) {
     let response = await fetch(url);
-    let data =await response.json();
+    let data = await response.json();
 
     return data;
 }
@@ -33,6 +33,8 @@ let randomPhotos = photos.sort(() => Math.random() - 0.5).slice(0, 2);
 // to see the results, right click on the page and click inspect, and click the console tab
 console.log(randomPhotos);
 
-document.getElementById("fakeImg_1").src = randomPhotos(0).thubnailUrl;
-document.getElementById("fakeImg_2").src = randomPhotos(1).thubnailUrl;
+document.getElementById("fakeImg_1").getElementsByTagName('img')[0].src = randomPhotos[0].url;
+document.getElementById("fakeImg_2").getElementsByTagName('img')[0].src = randomPhotos[1].url;
+
+
 })();

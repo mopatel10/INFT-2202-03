@@ -83,13 +83,13 @@
     
         // Create inner div for placeholder image
         var placeholderDiv = document.createElement("div");
-        placeholderDiv.id = "placeholder-image";
+        
         placeholderDiv.classList.add("text-center");
     
         // Create image element
         var imageElement = document.createElement("img");
-        imageElement.src = "./node-modules/holderjs/holder.js/200x200?text=Placeholder";
-        imageElement.alt = "Placeholder Image";
+        imageElement.src = "./holder.js/200x200";
+        imageElement.alt = "Image Placeholder";
     
         // Append image element to placeholder div
         placeholderDiv.appendChild(imageElement);
