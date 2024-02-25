@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
   
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event)  {
       event.preventDefault(); // Prevent the default form submission
   
       // Get form data
@@ -153,8 +153,124 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 3000); // 3 seconds delay for redirection
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    let ul = document.getElementsByTagName('ul')[0];
+
+    var listItem = document.createElement('li');
+    listItem.className = "nav-item ml-auto"; 
+
+    var link = document.createElement('a');
+    link.className = 'nav-link';
+    link.href = "./login.html";
+    
+    link.innerHTML = '<i class="fas fa-users">Login</i>';
+
+    listItem.appendChild(link);
+    ul.appendChild(listItem);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  let ul = document.getElementsByTagName('ul')[0];
+
+  var listItem = document.createElement('li');
+  listItem.className = "nav-item ml-auto"; 
+
+  var link = document.createElement('a');
+  link.className = 'nav-link';
+  link.href = "./register.html";
   
+  link.innerHTML = '<i class="fas fa-users">Register</i>';
+
+  listItem.appendChild(link);
+  ul.appendChild(listItem);
+});
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  $("#Sign-In").click(function (e){
+        e.preventDefault(); 
+        
+        // Get username 
+        let username = $("#login__username").val();
+        
+        if(username) {
+            // Removeexisting user
+            $(".navbar-nav .navbar-text").remove();
+            let NavItem = $("<li>").addClass("nav-item navbar-text").text("Welcome, " + username);
+            NavItem.addClass("nav-link");
+
+            // Find contact us link and add the nav item after contactUs link
+            let contactUsLink = $(".navbar-nav .nav-item:nth-child(6)");
+            if (contactUsLink.length > 0) {
+                contactUsLink.after(NavItem);
+            }
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Create error message div
+  var errorMessageDiv = document.createElement("div");
+  errorMessageDiv.id = "ErrorMessage";
+  errorMessageDiv.style.display = "none"; // Initially hide the error message
+
+  // Append error message div to the body
+  document.body.appendChild(errorMessageDiv);
+
+    // Hide error message on page load
+    $("#ErrorMessage").hide();
+
+    // Form submission handler
+    $("#registerForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Clear previous error messages
+        $("#ErrorMessage").empty().hide();
+
+        // Get form values
+        var firstName = $("#firstName").val();
+        var lastName = $("#lastName").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var confirmPassword = $("#confirmPassword").val();
+
+        // Perform validation
+        var isValid = true;
+        if (firstName.length < 2 || lastName.length < 2) {
+            $("#ErrorMessage").append("<p>First name and last name must be at least 2 characters long.</p>");
+            isValid = false;
+        }
+        if (email.length < 8 || email.indexOf('@') === -1) {
+            $("#ErrorMessage").append("<p>Email must be at least 8 characters long and contain '@'.</p>");
+            isValid = false;
+        }
+        if (password.length < 6 || password !== confirmPassword) {
+            $("#ErrorMessage").append("<p>Password must be at least 6 characters long and match confirm password.</p>");
+            isValid = false;
+        }
+
+        // If form is valid, create User instance and display in console
+        if (isValid) {
+            var user = new User(firstName, lastName, email, password);
+            console.log(user);
+            // Clear form
+            $("#registerForm")[0].reset();
+        } else {
+            $("#ErrorMessage").show();
+        }
+    
+});
+
+// User Class
+class User {
+    constructor(firstName, lastName, email, password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+}
 
 
+});
