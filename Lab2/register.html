@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="./style/app.css">
+
+    <script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+</head>
+<body>
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container" >
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <form id="registrationForm">     
+        <input class="feedback-input" type="text" id="firstName" name="firstName" placeholder="First Name">
+    </div>
+    <div>
+        <input  class="feedback-input"type="text" id="lastName" name="lastName" placeholder="Last Name">
+    </div>
+    <div>
+        <input class="feedback-input" type="email" id="email" name="email" placeholder="Email">
+    </div>
+    <div>
+        <input class="feedback-input" type="password" id="password" name="password" placeholder="Password">
+    </div>
+    <div>
+        <input class="feedback-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<script src="./scripts/app.js"></script> 
+</body>
+</html>
