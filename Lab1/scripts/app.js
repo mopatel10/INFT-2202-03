@@ -149,11 +149,14 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Start timer for redirection
       setTimeout(function() {
-        window.location.href = "./index.html"; // Redirect to home page
+       // window.location.href = "./index.html"; // Redirect to home page
       }, 3000); // 3 seconds delay for redirection
     });
   });
 
+// ******************************************************************
+// Lab 2
+// add login page link
   document.addEventListener("DOMContentLoaded", function() {
     let ul = document.getElementsByTagName('ul')[0];
 
@@ -170,6 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ul.appendChild(listItem);
 });
 
+// add Registration page link
 document.addEventListener("DOMContentLoaded", function() {
   let ul = document.getElementsByTagName('ul')[0];
 
@@ -186,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
   ul.appendChild(listItem);
 });
 
-
+// Move username to nav bar
 document.addEventListener("DOMContentLoaded", function() {
   $("#Sign-In").click(function (e){
         e.preventDefault(); 
@@ -209,20 +213,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Registration form validation
 document.addEventListener("DOMContentLoaded", function() {
+  let regisForm = document.getElementById("registrationForm");
   // Create error message div
   var errorMessageDiv = document.createElement("div");
   errorMessageDiv.id = "ErrorMessage";
-  errorMessageDiv.style.display = "none"; // Initially hide the error message
 
   // Append error message div to the body
-  document.body.appendChild(errorMessageDiv);
+  regisForm.appendChild(errorMessageDiv);
 
     // Hide error message on page load
     $("#ErrorMessage").hide();
 
     // Form submission handler
-    $("#registerForm").submit(function(event) {
+    $("#registrationForm").submit(function(event) {
         event.preventDefault(); // Prevent form submission
 
         // Clear previous error messages
@@ -255,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var user = new User(firstName, lastName, email, password);
             console.log(user);
             // Clear form
-            $("#registerForm")[0].reset();
+            $("#registrationForm")[0].reset();
         } else {
             $("#ErrorMessage").show();
         }
