@@ -1,0 +1,95 @@
+/* Custom styles for the home page */
+.home-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Text color */
+    background-color: rgb(23,24,31,255);
+    background-image: linear-gradient(45deg,#CC4949 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#CC4949 75%,#efefef),linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef);
+    
+}
+
+.welcome-text {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    color: rgb(234, 17, 17);
+}
+.description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: rgb(5, 5, 5);
+    margin: 0 auto;
+}
+
+.product-item {
+    color: rgb(255, 255, 255);
+}
+
+.service-item {
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(249, 248, 248); /* Text color */
+}
+
+/* Basic styling for the form */
+body { background:rgb(30,30,40); } 
+form { max-width:420px; margin:50px auto; }
+
+form .feedback-input {
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+font-weight:500;
+font-size: 18px;
+border-radius: 5px;
+line-height: 22px;
+background-color: transparent;
+border:2px solid #CC6666;
+transition: all 0.3s;
+padding: 13px;
+margin-bottom: 15px;
+width:100%;
+box-sizing: border-box;
+outline:0;
+}
+
+form .feedback-input:focus { border:2px solid #CC4949; }
+
+form textarea {
+height: 150px;
+line-height: 150%;
+resize:vertical;
+}
+
+form [type="submit"] {
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+width: 100%;
+background:#CC6666;
+border-radius:5px;
+border:0;
+cursor:pointer;
+color:white;
+font-size:24px;
+padding-top:10px;
+padding-bottom:10px;
+transition: all 0.3s;
+margin-top:-4px;
+font-weight:700;
+}
+
+form [type="submit"]:hover { background:#CC4949; }
+
+#ErrorMessage{
+    color: #CC4949;
+}
+  
