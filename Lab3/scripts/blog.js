@@ -26,7 +26,7 @@ async function createBlogCards() {
     
     try {
         // Fetching images data from Pixabay API
-        const response = await fetch('https://pixabay.com/api/?key=42894037-d9b043fa796fc0d18b8f4451a&per_page=20');
+        const response = await fetch('https://pixabay.com/api/?key=42894037-d9b043fa796fc0d18b8f4451a&q=motorcycle&per_page=20');
         const data = await response.json();
 
         // Looping through blog posts data to create blog cards
@@ -43,13 +43,12 @@ async function createBlogCards() {
             const details = document.createElement('ul');
             details.classList.add('details');
             details.innerHTML = `
-                <li class="author"><a href="#">Author</a></li>
-                <li class="date">Date</li>
+                <li class="author"><a href="#">Mohammed Patel</a></li>
+                <li class="date">01-02-2024</li>
                 <li class="tags">
                     <ul>
                         <li><a href="#">Tag 1</a></li>
-                        <li><a href="#">Tag 2</a></li>
-                        <li><a href="#">Tag 3</a></li>
+                    
                     </ul>
                 </li>
             `;
@@ -58,7 +57,6 @@ async function createBlogCards() {
             description.classList.add('description');
             description.innerHTML = `
                 <h1>${post.title}</h1>
-                <h2>Subtitle</h2>
                 <p>${post.body}</p>
                 <p class="read-more">
                     <a href="#">Read More</a>
