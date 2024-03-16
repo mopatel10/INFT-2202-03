@@ -16,6 +16,8 @@ async function fetchBlogPosts() {
     }
 }
 
+
+
 // Function to fetch images from Pixabay API and create blog cards
 async function createBlogCards() {
     // Selecting the container to append the blog cards
