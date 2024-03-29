@@ -1,12 +1,12 @@
 {
-  "name": "ice9",
+  "name": "express",
   "version": "1.0.0",
   "description": "In Class Exercise",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Matt Graham",
+  "author": "Mohammed Patel",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
