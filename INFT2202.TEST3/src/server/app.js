@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import AnimalCreateController from './controllers/animal/create.js';
 import AnimalRetrieveController from './controllers/animal/retrieve.js';
 
-const HTTP_PORT = 3001;
+const HTTP_PORT = 3000;
 const DB_NAME = 'mongodb://localhost:27017/inft2202';
 // const DB_NAME = 'mongodb://root:example@localhost:27017/?authMechanism=DEFAULT';
 const app = express();
