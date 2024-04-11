@@ -2,8 +2,17 @@
 <html lang="en" class="h-100" data-bs-theme="auto">
 
 <head>
-  <title>Mohammed Patel - Test 3</title>
-  <link href="./css/app.css" rel="stylesheet">
+  <title>Mohammed- Test 3</title>
+ 
+  <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+   
+  <link rel="stylesheet" href="../client/css/app.css">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -43,7 +52,7 @@
     <div class="container">
       <h1 class="mt-5">INFT 2202: Animal Registry</h1>
     </div>
-    <div class="container">
+    <div id="create-container" class="container">
       <hr>
       <p class="lead">Section 1</p>
       <p class="mb-0">In the container below:</p>
@@ -55,7 +64,33 @@
         <li>If there is a problem adding the animal, show an error below the form that describes what the problem was.</li>
         <li>Use Bootstrap classes to style the form and message area.</li>
       </ul>
+    
+      <form id="animal-form" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+          <div class="invalid-feedback">Please provide a name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="heads" class="form-label">Heads</label>
+          <input type="number" class="form-control" id="heads" name="heads" required>
+          <div class="invalid-feedback">Please provide the number of heads.</div>
+        </div>
+        <div class="mb-3">
+          <label for="legs" class="form-label">Legs</label>
+          <input type="number" class="form-control" id="legs" name="legs" required>
+          <div class="invalid-feedback">Please provide the number of legs.</div>
+        </div>
+        <div class="mb-3">
+          <label for="sound" class="form-label">Sound</label>
+          <input type="text" class="form-control" id="sound" name="sound" required>
+          <div class="invalid-feedback">Please provide a sound.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Animal</button>
+      </form>
+      <div id="form-message-area"></div>
     </div>
+    
     <div id="create-container" class="container">
       <!-- put your create form here -->
       <!-- put your create message area here -->
