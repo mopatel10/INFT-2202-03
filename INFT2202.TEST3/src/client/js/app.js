@@ -141,3 +141,38 @@ async function getAnimals(event) {
     return { error: error.message };
   }
 }
+
+/**
+ * TEST 4
+ */
+window.addEventListener('load', async () => {
+  try {
+    const animals = await getAnimals();
+    if (animals.error) {
+      displayErrorMessage(animals.error);
+    } else if (animals.length === 0) {
+      displayNoAnimalsMessage();
+    } else {
+      renderAnimalTable(animals);
+    }
+  } catch (error) {
+    displayErrorMessage('Failed to fetch animals. Please try again later.');
+  }
+});
+
+function displayErrorMessage(message) {
+  const messageArea = document.createElement('div');
+  messageArea.classList.add('alert');
+  messageArea.classList.add('alert-danger');
+  messageArea.textContent = message;
+  document.getElementById('retrieve-container').appendChild(messageArea);
+}
+
+function displayNoAnimalsMessage() {
+  const messageArea = document.createElement('div');
+  messageArea.classList.add('alert');
+  messageArea.classList.add('alert-info');
+  messageArea.textContent = 'There are currently no animals in the database.';
+  document.getElementById('retrieve-container').appendChild(messageArea);
+}
+
